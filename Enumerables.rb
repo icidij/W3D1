@@ -46,6 +46,30 @@ class Array
         output
     end
 
+    # def my_zip(*arr)
+    #     new_arr = Array.new(self.length) {Array.new(self.length)}
+    #     (0...self.length).each do |index2|
+    #     self.each_with_index do |element, idx|
+    #         if idx != nil && index2 != nil
+    #         new_arr[idx][index2] = self[idx]
+    #             (0...self.length).each do |index|
+    #                 arr.each_with_index do |ele, index1|
+    #                     if index1 != nil && index != nil
+    #                     new_arr[index][index1] = arr[index][index1]
+    #                     end
+    #                 end
+    #             end
+    #         end
+    #     end
+    #     end
+    
+    # new_arr
+
+    # end
+
+
+
+
 end
 
 
