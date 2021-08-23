@@ -34,6 +34,18 @@ class Array
         false
     end
 
+    def my_flatten 
+        output = []
+        self.my_each do |ele| # [1, 2, 3, [4, [5, 6]], [[[7]], 8]] 
+            if !ele.instance_of?(Array)
+                output << ele
+            else
+                output += ele.my_flatten
+            end
+        end
+        output
+    end
+
 end
 
 
