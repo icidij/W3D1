@@ -14,7 +14,18 @@ class Array
         output = []
         self.my_each { |ele| output << ele if prc.call(ele) }
         output
+
     end
+    def my_reject(&prc)
+        output = []
+        self.my_each {|ele| output << ele if !prc.call(ele)}
+        output
+
+
+    end
+
+
+
 end
 
 
