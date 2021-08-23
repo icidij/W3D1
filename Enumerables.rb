@@ -26,11 +26,13 @@ class Array
         self.my_each {|ele| return true if prc.call(ele)}
         false
     end
+    def my_all?(&prc)
+        count = 0
+        self.my_each {|ele| count += 1 if prc.call(ele)}
 
-
-
-
-
+        return true if count == self.length
+        false
+    end
 
 end
 
