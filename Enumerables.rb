@@ -46,26 +46,74 @@ class Array
         output
     end
 
-    # def my_zip(*arr)
-    #     new_arr = Array.new(self.length) {Array.new(self.length)}
-    #     (0...self.length).each do |index2|
-    #     self.each_with_index do |element, idx|
-    #         if idx != nil && index2 != nil
-    #         new_arr[idx][index2] = self[idx]
-    #             (0...self.length).each do |index|
-    #                 arr.each_with_index do |ele, index1|
-    #                     if index1 != nil && index != nil
-    #                     new_arr[index][index1] = arr[index][index1]
+    def my_zip(*arr)
+
+        new_arr = Array.new(self.length) {Array.new(self.length)}
+        
+        (0...self.length).each do |index2|
+            self.each_with_index do |element, idx|
+                if idx != nil && index2 != nil
+                  new_arr[idx][index2] = self[idx]
+                end
+            end
+        end
+
+        p new_arr
+
+
     #                     end
     #                 end
     #             end
     #         end
-    #     end
+        
     #     end
     
     # new_arr
 
-    # end
+    end
+
+    def my_rotate(num=1)
+        if num < 0
+            num.abs.times do
+               popped = self.pop
+               self.unshift(popped)
+            end
+        elsif num > 0
+            num.times do
+                shifted = self.shift
+                self.push(shifted)
+            end
+        end
+        self
+    end
+
+
+        
+        # elsif num < 0
+        
+
+
+        # output = []
+        # # (0...self.length)
+        # # num.abs.times do
+        #     self.each_with_index do |ele, i|
+        #         self.each_with_index { |ele2, j| output << ele2 if j == (i - num.abs)}
+        #     end      
+        #     self.each_with_index do |ele, i|
+        #         self.each_with_index do |ele2, j|
+        #             output << ele2 if j == (i + num.abs)
+        #     end  
+                
+    def my_join(string='')
+        output = []
+        self.each
+        
+
+    end
+
+    
+
+    
 
 
 
